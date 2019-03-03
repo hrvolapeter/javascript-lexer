@@ -4,7 +4,7 @@
 // Grammar rules are in [div](lexer::div)
 //
 // Supporting macro in [macros](lexer::macros)
-#![feature(const_fn, box_syntax, pattern)]
+#![feature(const_fn, box_syntax, pattern, proc_macro_hygiene)]
 #![deny(
     missing_docs,
     missing_debug_implementations,
@@ -20,6 +20,9 @@
 #[cfg(test)]
 #[macro_use]
 extern crate pretty_assertions;
+#[macro_use]
+extern crate phf;
+
 use std::str;
 
 /// Defines tokens
@@ -34,8 +37,11 @@ pub mod internship {
     extern crate internship;
     pub use internship::*;
 }
+mod identifier;
+mod number;
 mod state;
 mod state_machine;
+mod string;
 use self::{state_machine::parse, token::*};
 
 /// Lexer implmementation

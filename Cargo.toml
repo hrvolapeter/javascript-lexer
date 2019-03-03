@@ -1,6 +1,6 @@
 [package]
 name = "javascript_lexer"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["retep007 <peter.hrvola@hotmail.com>"]
 repository = "https://github.com/retep007/javascript-lexer"
 documentation = "https://retep007.github.io/javascript-lexer/"
@@ -18,12 +18,9 @@ is-it-maintained-issue-resolution = { repository = "retep007/javascript-lexer" }
 is-it-maintained-open-issues = { repository = "retep007/javascript-lexer" }
 maintenance = { status = "actively-developed" }
 
-[package.metadata.docs.rs]
-all-features = true
-no-default-features = false
-
 [dependencies]
 internship = "0.6.0"
+phf = { version = "0.7.24", features = ["macros"]}
 
 [dev-dependencies]
 pretty_assertions = "0.5"

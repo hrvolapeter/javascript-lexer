@@ -75,38 +75,71 @@ match (self, e) {
                 StateMachineWrapper::Identifier(s.into())
             }
             // Punctuator
+            (StateMachineWrapper::LCurly(s), _) => {
+                StateMachineWrapper::LCurlyAcc(s.into())
+            }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::LCurly) => {
                 StateMachineWrapper::LCurly(s.into())
             }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::RCurly) => {
                 StateMachineWrapper::RCurly(s.into())
             }
+            (StateMachineWrapper::RCurly(s), _) => {
+                StateMachineWrapper::RCurlyAcc(s.into())
+            }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::LRound) => {
                 StateMachineWrapper::LRound(s.into())
+            }
+            (StateMachineWrapper::LRound(s), _) => {
+                StateMachineWrapper::LRoundAcc(s.into())
             }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::RRound) => {
                 StateMachineWrapper::RRound(s.into())
             }
+            (StateMachineWrapper::RRound(s), _) => {
+                StateMachineWrapper::RRoundAcc(s.into())
+            }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::LSquare) => {
                 StateMachineWrapper::LSquare(s.into())
+            }
+            (StateMachineWrapper::LSquare(s), _) => {
+                StateMachineWrapper::LSquareAcc(s.into())
             }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::RSquare) => {
                 StateMachineWrapper::RSquare(s.into())
             }
+            (StateMachineWrapper::RSquare(s), _) => {
+                StateMachineWrapper::RSquareAcc(s.into())
+            }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::Semicolon) => {
                 StateMachineWrapper::Semicolon(s.into())
+            }
+            (StateMachineWrapper::Semicolon(s), _) => {
+                StateMachineWrapper::SemicolonAcc(s.into())
             }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::Comma) => {
                 StateMachineWrapper::Comma(s.into())
             }
+            (StateMachineWrapper::Comma(s), _) => {
+                StateMachineWrapper::CommaAcc(s.into())
+            }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::Colon) => {
                 StateMachineWrapper::Colon(s.into())
+            }
+            (StateMachineWrapper::Colon(s), _) => {
+                StateMachineWrapper::ColonAcc(s.into())
             }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::Questionmark) => {
                 StateMachineWrapper::QuestionMark(s.into())
             }
+            (StateMachineWrapper::QuestionMark(s), _) => {
+                StateMachineWrapper::QuestionMarkAcc(s.into())
+            }
             (StateMachineWrapper::InputElementDiv(s), Equivalence::Tilde) => {
                 StateMachineWrapper::Tilde(s.into())
+            }
+            (StateMachineWrapper::Tilde(s), _) => {
+                StateMachineWrapper::TildeAcc(s.into())
             }
             // Lesser
             (StateMachineWrapper::InputElementDiv(s), Equivalence::Lesser) => {

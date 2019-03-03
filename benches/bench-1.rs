@@ -8,6 +8,7 @@ use self::test::Bencher;
 use javascript_lexer::Lexer;
 
 static JS: &str = r#"
+var a = "something very importnat \n\n";
 class A extend B{get a(){a}
 get b(){b}
 set b(c){c}
@@ -18,7 +19,7 @@ var a=function(){var b=new A}
 #[bench]
 fn react_build_script(b: &mut Bencher) {
     let mut s = String::new();
-    for _ in 1..1000 {
+    for _ in 1..10000 {
         s += JS;
     }
     println!("Bytes {}", s.bytes().len());
