@@ -32,9 +32,9 @@ pub enum Token {
     Assign,
     /// =>
     AssignBigger,
-    /// >
+    /// \>
     Bigger,
-    /// >=
+    /// \>=
     BiggerEqual,
     /// True / False
     BoolLiteral(bool),
@@ -58,9 +58,9 @@ pub enum Token {
     DoubleAnd,
     /// ==
     DoubleAssign,
-    /// >>
+    /// \\>>
     DoubleBigger,
-    /// >>=
+    /// \\>>=
     DoubleBiggerEqual,
     /// <<
     DoubleLesser,
@@ -172,9 +172,9 @@ pub enum Token {
     LRound,
     /// [
     LSquare,
-    /// -
+    /// \-
     Minus,
-    /// -=
+    /// \-=
     MinusAssign,
     /// 0 0.5 1e2 2.3e2
     NumericLiteral(Number),
@@ -186,9 +186,9 @@ pub enum Token {
     Percent,
     /// %=
     PercentAssign,
-    /// +
+    /// \+
     Plus,
-    /// +=
+    /// \+=
     PlusAssign,
     /// ?
     QuestionMark,
@@ -198,21 +198,21 @@ pub enum Token {
     RRound,
     /// ]
     RSquare,
-    /// *
+    /// \*
     Star,
-    /// *=
+    /// \*=
     StarAssign,
     /// "adad" 'adada'
     StringLiteral(String),
-    /// `ada{var}`
+    /// \`ada{var}`
     Template(String),
     /// ~
     Tilde,
     /// ===
     TripleAssign,
-    /// >>>
+    /// \>>>
     TripleBigger,
-    /// >>>=
+    /// \>>>=
     TripleBiggerEqual,
     /// ...
     TripleDot,

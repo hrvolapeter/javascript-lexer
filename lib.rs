@@ -1,9 +1,6 @@
 //! Lexer module consumes text input and produces linear stream of tokens.
 //!
-//! Tokens are defined in [token](lexer::token)
-// Grammar rules are in [div](lexer::div)
-//
-// Supporting macro in [macros](lexer::macros)
+//! Tokens are defined in [token](token)
 #![feature(const_fn, const_let, box_syntax, pattern)]
 #![deny(
     missing_docs,
