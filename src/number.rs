@@ -87,7 +87,7 @@ pub fn parse_exponent(input: &[u8], c_src: &mut usize, token_len: u64) -> Result
     };
 
     let exponent = unsafe { str::from_utf8_unchecked(&input[i_e + 1..*c_src - 1]) };
-    let exponent = i128::from_str_radix(exponent, 10).unwrap();
+    let exponent = i64::from_str_radix(exponent, 10).unwrap();
     *c_src += 1;
     Ok(Token::NumericLiteral(Number::new(
         integer, decimal, exponent, 10,

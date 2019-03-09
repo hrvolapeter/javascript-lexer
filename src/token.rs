@@ -3,15 +3,19 @@ use internship::IStr;
 /// Number representation of parsed number
 #[derive(PartialEq, Debug, Clone, Copy)]
 pub struct Number {
-    integer: u32,
-    decimal: u32,
-    exponent: i128,
-    base: u8,
+    /// Whole part of number
+    pub integer: u32,
+    /// Decimal part of number
+    pub decimal: u32,
+    /// Number behind E / e (exponent)
+    pub exponent: i64,
+    /// base of number
+    pub base: u8,
 }
 
 impl Number {
     /// Create instance of js representaiton of number
-    pub fn new(integer: u32, decimal: u32, exponent: i128, base: u8) -> Self {
+    pub fn new(integer: u32, decimal: u32, exponent: i64, base: u8) -> Self {
         Self {
             integer,
             decimal,
