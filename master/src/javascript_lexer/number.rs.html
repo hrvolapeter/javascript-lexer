@@ -295,7 +295,7 @@
     };
 
     <span class="kw">let</span> <span class="ident">exponent</span> <span class="op">=</span> <span class="kw">unsafe</span> { <span class="ident">str</span>::<span class="ident">from_utf8_unchecked</span>(<span class="kw-2">&amp;</span><span class="ident">input</span>[<span class="ident">i_e</span> <span class="op">+</span> <span class="number">1</span>..<span class="kw-2">*</span><span class="ident">c_src</span> <span class="op">-</span> <span class="number">1</span>]) };
-    <span class="kw">let</span> <span class="ident">exponent</span> <span class="op">=</span> <span class="ident">i128</span>::<span class="ident">from_str_radix</span>(<span class="ident">exponent</span>, <span class="number">10</span>).<span class="ident">unwrap</span>();
+    <span class="kw">let</span> <span class="ident">exponent</span> <span class="op">=</span> <span class="ident">i64</span>::<span class="ident">from_str_radix</span>(<span class="ident">exponent</span>, <span class="number">10</span>).<span class="ident">unwrap</span>();
     <span class="kw-2">*</span><span class="ident">c_src</span> <span class="op">+=</span> <span class="number">1</span>;
     <span class="prelude-val">Ok</span>(<span class="ident">Token</span>::<span class="ident">NumericLiteral</span>(<span class="ident">Number</span>::<span class="ident">new</span>(
         <span class="ident">integer</span>, <span class="ident">decimal</span>, <span class="ident">exponent</span>, <span class="number">10</span>,

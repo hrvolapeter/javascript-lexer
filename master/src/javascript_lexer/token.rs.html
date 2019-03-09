@@ -217,21 +217,29 @@
 <span id="217">217</span>
 <span id="218">218</span>
 <span id="219">219</span>
+<span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
+<span id="223">223</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="kw">use</span> <span class="ident">internship</span>::<span class="ident">IStr</span>;
 
 <span class="doccomment">/// Number representation of parsed number</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">PartialEq</span>, <span class="ident">Debug</span>, <span class="ident">Clone</span>, <span class="ident">Copy</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Number</span> {
-    <span class="ident">integer</span>: <span class="ident">u32</span>,
-    <span class="ident">decimal</span>: <span class="ident">u32</span>,
-    <span class="ident">exponent</span>: <span class="ident">i128</span>,
-    <span class="ident">base</span>: <span class="ident">u8</span>,
+    <span class="doccomment">/// Whole part of number</span>
+    <span class="kw">pub</span> <span class="ident">integer</span>: <span class="ident">u32</span>,
+    <span class="doccomment">/// Decimal part of number</span>
+    <span class="kw">pub</span> <span class="ident">decimal</span>: <span class="ident">u32</span>,
+    <span class="doccomment">/// Number behind E / e (exponent)</span>
+    <span class="kw">pub</span> <span class="ident">exponent</span>: <span class="ident">i64</span>,
+    <span class="doccomment">/// base of number</span>
+    <span class="kw">pub</span> <span class="ident">base</span>: <span class="ident">u8</span>,
 }
 
 <span class="kw">impl</span> <span class="ident">Number</span> {
     <span class="doccomment">/// Create instance of js representaiton of number</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">integer</span>: <span class="ident">u32</span>, <span class="ident">decimal</span>: <span class="ident">u32</span>, <span class="ident">exponent</span>: <span class="ident">i128</span>, <span class="ident">base</span>: <span class="ident">u8</span>) <span class="op">-&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">integer</span>: <span class="ident">u32</span>, <span class="ident">decimal</span>: <span class="ident">u32</span>, <span class="ident">exponent</span>: <span class="ident">i64</span>, <span class="ident">base</span>: <span class="ident">u8</span>) <span class="op">-&gt;</span> <span class="self">Self</span> {
         <span class="self">Self</span> {
             <span class="ident">integer</span>,
             <span class="ident">decimal</span>,
