@@ -1,6 +1,6 @@
 [package]
 name = "javascript_lexer"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["retep007 <peter.hrvola@hotmail.com>"]
 repository = "https://github.com/retep007/javascript-lexer"
 documentation = "https://retep007.github.io/javascript-lexer/"

@@ -6,6 +6,7 @@ const IDENTIFIERS: phf::Map<&'static str, Token> = phf_map! {
     "true" => Token::BoolLiteral(true),
     "false" => Token::BoolLiteral(false),
     "null" => Token::LNull,
+    "undefined" => Token::LUndefined,
     "function" => Token::KFunction,
     "async" => Token::KAsync,
     "class" => Token::KClass,

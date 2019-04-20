@@ -172,6 +172,8 @@ pub enum Token {
     LineTerminator,
     /// null
     LNull,
+    /// undefined
+    LUndefined,
     /// (
     LRound,
     /// [
