@@ -92,6 +92,8 @@ pub enum Token {
     ExclamationDoubleAssign,
     /// a, name, (not keyword or reserved word)
     IdentifierName(IStr),
+    /// as
+    KAs,
     /// async
     KAsync,
     /// await
@@ -124,6 +126,8 @@ pub enum Token {
     KFinally,
     /// for
     KFor,
+    /// from
+    KFrom,
     /// function
     KFunction,
     /// get
@@ -132,6 +136,8 @@ pub enum Token {
     KIf,
     /// in
     KIn,
+    /// import
+    KImport,
     /// let
     KLet,
     /// new

@@ -42,6 +42,9 @@ const IDENTIFIERS: phf::Map<&'static str, Token> = phf_map! {
     "void" => Token::KVoid,
     "typeof" => Token::KTypeof,
     "new" => Token::KNew,
+    "import" => Token::KImport,
+    "as" => Token::KAs,
+    "from" => Token::KFrom,
 };
 
 #[inline]
