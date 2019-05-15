@@ -11,15 +11,15 @@ assignees: ''
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behavior
+Steps to reproduce the behavior. If possible please include code sample.
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+A clear and concise description of what you expected to happen. If possible please include expected output.
 
 
 **Desktop (please complete the following information):**
  - OS: [e.g. MacOS]
- - Version [e.g. 22]
+ - Version of library [e.g. 0.1.7]
 
 **Additional context**
 Add any other context about the problem here.
