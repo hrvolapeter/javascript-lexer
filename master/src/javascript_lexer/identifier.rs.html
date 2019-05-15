@@ -100,6 +100,10 @@
 <span id="100">100</span>
 <span id="101">101</span>
 <span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">token</span>::<span class="ident">Token</span>;
 <span class="kw">use</span> <span class="ident">internship</span>::<span class="ident">IStr</span>;
@@ -109,6 +113,7 @@
     <span class="string">&quot;true&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">BoolLiteral</span>(<span class="bool-val">true</span>),
     <span class="string">&quot;false&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">BoolLiteral</span>(<span class="bool-val">false</span>),
     <span class="string">&quot;null&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">LNull</span>,
+    <span class="string">&quot;undefined&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">LUndefined</span>,
     <span class="string">&quot;function&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KFunction</span>,
     <span class="string">&quot;async&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KAsync</span>,
     <span class="string">&quot;class&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KClass</span>,
@@ -144,6 +149,9 @@
     <span class="string">&quot;void&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KVoid</span>,
     <span class="string">&quot;typeof&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KTypeof</span>,
     <span class="string">&quot;new&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KNew</span>,
+    <span class="string">&quot;import&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KImport</span>,
+    <span class="string">&quot;as&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KAs</span>,
+    <span class="string">&quot;from&quot;</span> <span class="op">=&gt;</span> <span class="ident">Token</span>::<span class="ident">KFrom</span>,
 };
 
 <span class="attribute">#[<span class="ident">inline</span>]</span>
