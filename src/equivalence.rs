@@ -49,10 +49,10 @@ pub enum Equivalence {
     BackTick,     // `
     Letter,       // A-Za-z_
 }
-type EquivalenceTable = [Equivalence; 255];
+type EquivalenceTable = [Equivalence; 256];
 pub const EQUIVALENCE_CLASS: EquivalenceTable = gen_equivalence();
 const fn gen_equivalence() -> EquivalenceTable {
-    let mut res = [Equivalence::HELL; 255];
+    let mut res = [Equivalence::HELL; 256];
     res = ident(res);
     res = white_space(res);
     res = line_terminator(res);
